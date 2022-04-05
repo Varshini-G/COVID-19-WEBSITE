@@ -1,0 +1,123 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="Joinus.css">
+    <link rel="stylesheet"  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <!---we had linked our css file----->
+</head>
+<body>
+   
+    <div class="full-page">
+        <div class="navbar">
+            <div>
+                <a href='responsive.html'>COVID-19</a>
+            </div>
+            <nav>
+                <ul id='MenuItems'>
+                    
+                   
+                    
+                    <li><a href='#contact'>Contact</a></li>
+                    <li><button class='loginbtn' onclick="document.getElementById('login-form').style.display='block'" style="width:auto;">Contribute</button></li>
+                </ul>
+            </nav>
+        </div>
+        <div id='login-form'class='login-page'>
+            <div class="form-box">
+                <div class='button-box'>
+                    <div id='btn'></div>
+                    <button type='button'onclick='login()'class='toggle-btn'>Log In</button>
+                    <button type='button'onclick='register()'class='toggle-btn'>Register</button>
+                </div>
+                <form action="Joinus.php" id='login' class='input-group-login' method='post'>
+                    <input type='text'class='input-field'placeholder='Email Id' required >
+		    <input type='password'class='input-field'placeholder='Enter Password' required>
+		    <input type='checkbox'class='check-box'><span>Remember Password</span>
+		    <button type='submit'class='submit-btn'>Log in</button>
+		 </form>
+		 <form id='register'action="Joinus.php" class='input-group-register'  method='post'>
+		     <input type='text' name='firstname' class='input-field'placeholder='First Name' required>
+		     <input type='text' name='lastname' class='input-field'placeholder='Last Name ' required>
+		     <input type='email'name='email' class='input-field'placeholder='Email Id' required>
+		     <input type='password'name='password' class='input-field'placeholder='Enter Password' required>
+		     
+		     <input type='checkbox'class='check-box'><span>I agree to the terms and conditions</span>
+                    <button type='submit'class='submit-btn' name ="submit" >Register</button>
+	         </form>
+            </div>
+        </div>
+    
+    <script>
+        var x=document.getElementById('login');
+		var y=document.getElementById('register');
+		var z=document.getElementById('btn');
+		function register()
+		{
+			x.style.left='-400px';
+			y.style.left='50px';
+			z.style.left='110px';
+		}
+		function login()
+		{
+			x.style.left='50px';
+			y.style.left='450px';
+			z.style.left='0px';
+		}
+	</script>
+	<script>
+        var modal = document.getElementById('login-form');
+        window.onclick = function(event) 
+        {
+            if (event.target == modal) 
+            {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+
+    <h2>CONTRIBUTE FOR THE POOR IN THIS HARD TIMES!!!.</h2>
+    </div>
+    <footer>
+        <a name ="contact"><div class="footercontainer">
+            <div class="footerrow">
+                <div class="footer-col">
+                    <h4>Have questions</h4>
+                    <ul>
+                        <li><a href="">Call-800 900 2344</a></li>
+                        <li><a href="">Email-covidservice@gmail.com</a></li>
+                        <li><a href="">Timing-24/7</a></li>
+      
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Service</h4>
+                    <ul>
+                        <li class="poor">Contribute for Poor</li>
+                        <li><a href="">JOIN US</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Connect With Us</h4>
+                    <div class="sociallinks">
+                        
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+        </div></a>
+      </footer>
+      
+
+
+    
+</body>
+
+</html>
